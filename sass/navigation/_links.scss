@@ -1,0 +1,21 @@
+a {
+	color: $orange;
+	transition: .5s;
+
+	&:visited {
+		// color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $gray;
+		text-decoration: none;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
