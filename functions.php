@@ -202,6 +202,7 @@ add_filter('wp_nav_menu','new_submenu_class');
 add_image_size( 'project-slide', 1145, 650, true );
 add_image_size( 'project-archive', 640, 580, true );
 add_image_size( 'project-pagination', 960, 290, true );
+add_image_size( 'hero-square', 869, 829, true );
 
 // Make the search to index custom
 /**
@@ -336,7 +337,7 @@ function more_post_ajax(){
 				$out .= '<div class="work-card__content">';
 				$out .= '<div class="work-card__tags">';
 				$out .= '</div>';
-        $out .= '<a><h2 class="work-card__heading">' . get_the_title() . ', ' . get_field('project_location') . '</h2></a>';
+        $out .= '<h2 class="work-card__heading"><a>' . get_the_title() . ', <span>' . get_field('project_location') . '</span></a></h2>';
 				$out .= '</div>';
         $out .= '</li>';
 
