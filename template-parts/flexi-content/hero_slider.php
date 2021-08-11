@@ -26,7 +26,34 @@ $hero_slide_video_hosted = get_sub_field('hero_slide_video_hosted');
                 <img class="slider_top" src="<?php echo get_template_directory_uri(); ?>/images/slider-img_top.svg" alt="<?php echo $hero_slide_title ?>" loading="lazy">
                 <?php while ( have_rows('hero_slide_images') ) : the_row(); ?>
                   <div class="swiper-slide">
-                    <img src="<?php the_sub_field('hero_slide_image'); ?>" alt="<?php echo $hero_slide_title ?>" loading="lazy">
+
+
+                    <?php
+          						$image = get_sub_field('hero_slide_image');
+          						if( $image ):
+
+          						    // Image variables.
+          						    $url = $image['url'];
+          						    $title = $image['title'];
+          						    $alt = $image['alt'];
+          						    $caption = $image['caption'];
+
+          						    // Thumbnail size attributes.
+          						    $size = 'hero-square';
+          						    $thumb = $image['sizes'][ $size ];
+          						    $width = $image['sizes'][ $size . '-width' ];
+          						    $height = $image['sizes'][ $size . '-height' ]; ?>
+
+
+
+
+          						        <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?> <?php echo get_sub_field('hero_slide_image'); ?>" loading="lazy" />
+          						<?php endif; ?>
+
+
+
+
+
                   </div>
                 <?php endwhile; ?>
               </div>
