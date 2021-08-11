@@ -23,7 +23,7 @@ $( document ).ready(function() {
 
 
   var ppp = 3; // Post per page
-  var pageNumber = 4;
+  var pageNumber = 3;
 
 
   function load_posts(){
