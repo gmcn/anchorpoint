@@ -3218,6 +3218,13 @@ textarea.custom-input {
   position: relative;
   margin: 0;
 }
+
+.gallery .work-card--compact .work-card__image::before,
+.gallery .work-card--masonry .work-card__image::before{
+  background-color: transparent !important;
+}
+
+
 .work-card--compact .work-card__image::before,
 .work-card--masonry .work-card__image::before {
   content: "";
@@ -3228,9 +3235,24 @@ textarea.custom-input {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: $orange;
+  background: url(images/hover_logo.svg) top right no-repeat rgba(255,255,255,1);
+  background-size: contain;
+  @include lg {
+    background-size: auto;
+  }
+  // background-color: #fff;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+.works__item:hover {
+
+  .work-card__heading {
+    a {
+      color: #000 !important;
+    }
+
+  }
+
 }
 .work-card--compact .work-card__image:hover,
 .work-card--compact .work-card__image:focus,
@@ -3238,12 +3260,22 @@ textarea.custom-input {
 .work-card--masonry .work-card__image:focus {
   outline: none;
   opacity: 1;
+  background: url(images/hover_logo.svg) top right no-repeat rgba(255,255,255,.75);
+  background-size: contain;
+  @include lg {
+    background-size: auto;
+  }
 }
 .work-card--compact .work-card__image:hover::before,
 .work-card--compact .work-card__image:focus::before,
 .work-card--masonry .work-card__image:hover::before,
 .work-card--masonry .work-card__image:focus::before {
   opacity: 1;
+  background: url(images/hover_logo.svg) top right no-repeat rgba(255,255,255,.75);
+  background-size: contain;
+  @include lg {
+    background-size: auto;
+  }
 }
 .work-card--compact .work-card__year,
 .work-card--masonry .work-card__year {
@@ -3414,6 +3446,14 @@ textarea.custom-input {
   letter-spacing: 0.025em;
   font-weight: 500 !important;
   // text-transform: uppercase;
+
+  span {
+    display: block;
+    font-weight: 300;
+    font-size: .75em;
+  }
+
+
 }
 @media (min-width: 1200px) {
   .work-card__heading {
@@ -8707,6 +8747,7 @@ textarea.custom-input {
 }
 .an-awards__intro {
   margin-bottom: 20px;
+  min-height: 500px;
 }
 @media (min-width: 576px) {
   .an-awards__intro {
@@ -12223,18 +12264,18 @@ textarea.custom-input {
 }
 @media (min-width: 480px) {
   .team__wrapper {
-    margin: 0 -10px;
+    // margin: 0 -10px;
   }
 }
 @media (min-width: 992px) {
   .team__wrapper {
-    margin: 0 -15px;
+    // margin: 0 -15px;
     justify-content: flex-start;
   }
 }
 @media (min-width: 1200px) {
   .team__wrapper {
-    margin: 0 -30px;
+    // margin: 0 -30px;
   }
 }
 .team__item {
@@ -12403,8 +12444,8 @@ textarea.custom-input {
 .team-item {
   width: 100%;
   // max-width: 30%;
-  max-width: 16%;
-  margin: 0 30px 46px;
+  max-width: 19%;
+  margin: 0 5px 46px;
 }
 @media (min-width: 992px) {
   .team-item:hover .team-item__photo {

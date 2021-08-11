@@ -78,11 +78,11 @@ get_header(); ?>
 								$post_date = get_the_date( 'Y' );
 								$location = get_field('project_location');
 
-								$terms = get_the_terms( $post->ID, 'work_types' );
-								$term = array_shift( $terms );
+								// $terms = get_the_terms( $post->ID, 'work_types' );
+								// $term = array_shift( $terms );
 		        ?>
 
-						<li class="works__item work-card work-card--compact col-12 col-md-6 col-lg-4 <?php foreach ( get_the_terms( get_the_ID(), 'work_types' ) as $tax ) { echo  '__js_' . __( $tax->slug . " " ); } ?> __js_<?php echo $post_date; ?>">
+						<li class="works__item work-card work-card--compact col-12 col-md-6 col-lg-4 <?php //foreach ( get_the_terms( get_the_ID(), 'work_types' ) as $tax ) { echo  '__js_' . __( $tax->slug . " " ); } ?> __js_<?php echo $post_date; ?>">
 						 <a class="work-card__image" href="<?php echo the_permalink(); ?>">
 
 							 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'project-archive') ?>" alt="<?php echo the_title() ?>" loading="lazy">
@@ -112,7 +112,7 @@ get_header(); ?>
 							 <h2 class="work-card__heading">
 
 								 <?php if ($location): ?>
-									 <a><?php echo the_title(); ?>, <br> <?php echo $location; ?></a>
+									 <a><?php echo the_title(); ?>, <span><?php echo $location; ?></span></a>
 								 <?php else : ?>
 									 <a><?php echo the_title(); ?></a>
 								 <?php endif; ?>
