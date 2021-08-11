@@ -34,7 +34,7 @@
 		</header> -->
 		<!-- <div class="container-fluid"> -->
 
-			<ul class="works__list __js_gallery-filter">
+			<ul class="works__list gallery __js_gallery-filter">
 
 			<?php while ( have_rows('gallery') ) : the_row();
 
@@ -46,33 +46,44 @@
 			?>
 
 			<li class="masonry-item works__item work-card work-card--compact <?php echo "__js_" . implode( ' __js_', $field ); ?>  __js_<?php echo $post_date; ?>">
-				<a class="work-card__image fancybox" rel="group" href="<?php echo get_sub_field('gallery_item_image') ?>">
-
-					<img src="<?php echo get_sub_field('gallery_item_image') ?>" alt="<?php echo get_sub_field('gallery_item_name'); ?>" loading="lazy">
-
-
-				</a>
-				<div class="work-card__content">
-					<!-- <div class="work-card__year"> -->
-
-						<?php
-
-							//echo $post_date;
-
-						 ?>
-
-					<!-- </div> -->
-					<div class="work-card__tags">
-            <?php echo $services; ?>
-					</div>
-					<h2 class="work-card__heading">
-
-						<a><?php echo get_sub_field('gallery_item_name'); ?></a>
 
 
 
-					</h2>
-				</div>
+
+
+					<?php
+						$image = get_sub_field('gallery_item_image');
+						if( $image ):
+
+						    // Image variables.
+						    $url = $image['url'];
+						    $title = $image['title'];
+						    $alt = $image['alt'];
+						    $caption = $image['caption'];
+
+						    // Thumbnail size attributes.
+						    $size = 'large';
+						    $thumb = $image['sizes'][ $size ];
+						    $width = $image['sizes'][ $size . '-width' ];
+						    $height = $image['sizes'][ $size . '-height' ]; ?>
+
+
+								<a class="work-card__image fancybox" rel="group" href="<?php echo esc_url($url); ?>">
+
+
+
+
+						        <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?> <?php echo get_sub_field('gallery_item_name'); ?>" loading="lazy" />
+						    </a>
+						<?php endif; ?>
+
+
+
+
+
+
+
+
 			</li>
 
 
