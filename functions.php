@@ -203,6 +203,8 @@ add_image_size( 'project-slide', 1145, 650, true );
 add_image_size( 'project-archive', 640, 580, true );
 add_image_size( 'project-pagination', 960, 290, true );
 add_image_size( 'hero-square', 869, 829, true );
+add_image_size( 'horizontal_gallery', 640, 480, true );
+add_image_size( 'news_featured', 640, 800, true );
 
 // Make the search to index custom
 /**
@@ -261,7 +263,7 @@ add_action('login_head', 'my_custom_login');
 //Projects CPT
 
 require_once get_template_directory() . '/functions/projects.php';
-require_once get_template_directory() . '/functions/news.php';
+// require_once get_template_directory() . '/functions/news.php';
 
 /**
  * Remove Contact Form 7's scripts and styles without having to add anything to wp-config.php (as described
@@ -337,7 +339,8 @@ function more_post_ajax(){
 				$out .= '<div class="work-card__content">';
 				$out .= '<div class="work-card__tags">';
 				$out .= '</div>';
-        $out .= '<h2 class="work-card__heading"><a>' . get_the_title() . ', <span>' . get_field('project_location') . '</span></a></h2>';
+        // $out .= '<h2 class="work-card__heading"><a>' . get_the_title() . ', <span>' . get_field('project_location') . '</span></a></h2>';
+				$out .= '<h2 class="work-card__heading"><a>' . get_the_title() . '</a></h2>';
 				$out .= '</div>';
         $out .= '</li>';
 
