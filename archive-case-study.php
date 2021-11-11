@@ -112,7 +112,9 @@ get_header(); ?>
 							 <h2 class="work-card__heading">
 
 								 <?php if ($location): ?>
-									 <a><?php echo the_title(); ?>, <span><?php echo $location; ?></span></a>
+									 <a><?php echo the_title(); ?>
+										 <!-- <span><?php echo $location; ?></span> -->
+									 </a>
 								 <?php else : ?>
 									 <a><?php echo the_title(); ?></a>
 								 <?php endif; ?>
