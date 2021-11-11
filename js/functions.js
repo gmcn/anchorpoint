@@ -20,6 +20,34 @@
 });
 
 $( document ).ready(function() {
+        $( "#one" ).click(function() {
+            $( "#one_content" ).addClass( "is-active" );
+            $( "#two_content" ).removeClass( "is-active" );
+            $( "#three_content" ).removeClass( "is-active" );
+            $( "#four_content" ).removeClass( "is-active" );
+
+        });
+        $( "#two" ).click(function() {
+          $( "#one_content" ).removeClass( "is-active" );
+          $( "#two_content" ).addClass( "is-active" );
+          $( "#three_content" ).removeClass( "is-active" );
+          $( "#four_content" ).removeClass( "is-active" );
+        });
+        $( "#three" ).click(function() {
+          $( "#one_content" ).removeClass( "is-active" );
+          $( "#two_content" ).removeClass( "is-active" );
+          $( "#three_content" ).addClass( "is-active" );
+          $( "#four_content" ).removeClass( "is-active" );
+        });
+        $( "#four" ).click(function() {
+          $( "#one_content" ).removeClass( "is-active" );
+          $( "#two_content" ).removeClass( "is-active" );
+          $( "#three_content" ).removeClass( "is-active" );
+          $( "#four_content" ).addClass( "is-active" );
+        });
+    });
+
+$( document ).ready(function() {
 
 
   var ppp = 3; // Post per page
@@ -128,6 +156,22 @@ var vertreview = new Swiper(".vertreview", {
        },
     });
 
+
+var serviceList = new Swiper(".serviceList", {
+    slidesPerView: 1,
+    breakpoints: {
+        992: {
+            slidesPerView: 2,
+        },
+    },
+    spaceBetween: 30,
+    loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  });
+
 var horizontal_gallery = new Swiper(".horizontal_gallery", {
         slidesPerView: 4,
         spaceBetween: 5,
@@ -158,6 +202,17 @@ var sliderNews4 = new Swiper('.__js_slider-awards', {
     },
 });
 
+var testimonialSwiper = new Swiper('.__js_testimonialSwiper', {
+  slidesPerView: 1,
+  loop: true,
+    pagination: {
+      el: ".test-pagination",
+      clickable: true,
+    },
+});
+
+
+
 var sliderNews3 = new Swiper('.__js_slider-news-3', {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -180,7 +235,7 @@ var sliderNews3 = new Swiper('.__js_slider-news-3', {
 
 var sliderNews2 = new Swiper('.__js_slider-news-2', {
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     speed: 600,
     navigation: {
         prevEl: '.arrow-square--prev',
@@ -231,7 +286,10 @@ var mySwiper = new Swiper('.__js_testimonials-carousel', {
 var mySwiperhero = new Swiper('.__js_slider-hero', {
     slidesPerView: 1,
     effect: "fade",
-    loop: true,
+    loop: false,
+    fadeEffect: {
+      crossFade: true
+     },
     speed: 2500,
     autoplay: {
        delay: 2500
