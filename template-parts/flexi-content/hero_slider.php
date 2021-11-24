@@ -8,6 +8,7 @@ $hero_slide_cta_details = get_sub_field('hero_slide_cta_details');
 $hero_slide_cta = get_sub_field('hero_slide_cta');
 $hero_slide_video = get_sub_field('hero_slide_video');
 $hero_slide_video_hosted = get_sub_field('hero_slide_video_hosted');
+$slide_video_type = get_sub_field('slide_video_type');
 
  ?>
 
@@ -84,14 +85,11 @@ $hero_slide_video_hosted = get_sub_field('hero_slide_video_hosted');
            <div class="an-awards__buttons">
              <a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 
-             <?php if ($hero_slide_video): ?>
+             <?php //if ($hero_slide_video): ?>
 
              <div class="our-story__video-btn video-btn">
-               <?php
-
-               $slide_video_type = get_sub_field('slide_video_type');
-
-                if ($slide_video_type == "self-hosted"): ?>
+               
+               <?php if ($slide_video_type == "self-hosted"): ?>
 
                 <a class="video-btn__btn fancybox" href="#myVideo">
 
@@ -110,14 +108,14 @@ $hero_slide_video_hosted = get_sub_field('hero_slide_video_hosted');
                <span class="video-btn__text">view our story</span>
              </div>
 
-           <video id="myVideo" width="800" src="<?php echo $hero_slide_video_hosted ?>" controls="controls" style="display:none;"> </video>
+             <video id="myVideo" width="800" src="<?php echo $hero_slide_video_hosted ?>" controls="controls" style="display:none;"> </video>
 
-         <?php endif; ?>
+            <?php endif; ?>
            </div>
 
 
 
-       <?php endif; ?>
+       <?php //endif; ?>
 
 
         <div class="an-awards__notice"><?php echo $hero_slide_cta_details ?></div>

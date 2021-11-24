@@ -34,7 +34,7 @@
 		</header> -->
 		<!-- <div class="container-fluid"> -->
 
-			<ul class="works__list gallery __js_gallery-filter">
+			<ul class="works__list gallery ">
 
 			<?php while ( have_rows('gallery') ) : the_row();
 
@@ -62,16 +62,13 @@
 						    $caption = $image['caption'];
 
 						    // Thumbnail size attributes.
-						    $size = 'large';
+						    $size = 'horizontal_gallery';
 						    $thumb = $image['sizes'][ $size ];
 						    $width = $image['sizes'][ $size . '-width' ];
 						    $height = $image['sizes'][ $size . '-height' ]; ?>
 
 
 								<a class="work-card__image fancybox" rel="group" href="<?php echo esc_url($url); ?>">
-
-
-
 
 						        <img src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?> <?php echo get_sub_field('gallery_item_name'); ?>" loading="lazy" />
 						    </a>

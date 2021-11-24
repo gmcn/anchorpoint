@@ -58,6 +58,10 @@
 
          <?php include(locate_template("template-parts/flexi-content/our-approach.php")); ?>
 
+       <?php elseif( get_row_layout() == 'our_approach_timeline' ): ?>
+
+         <?php include(locate_template("template-parts/flexi-content/our-approach-timeline.php")); ?>
+
        <?php elseif( get_row_layout() == 'section_solutions' ): ?>
 
          <?php include(locate_template("template-parts/flexi-content/section_solutions.php")); ?>
@@ -77,6 +81,10 @@
        <?php elseif( get_row_layout() == 'horizontal_gallery' ): ?>
 
          <?php include(locate_template("template-parts/flexi-content/horizontal-gallery.php")); ?>
+
+       <?php elseif( get_row_layout() == 'section_cta' ): ?>
+
+         <?php include(locate_template("template-parts/flexi-content/section_cta.php")); ?>
 
 
      <?php endif; ?>

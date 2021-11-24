@@ -15,6 +15,87 @@
 
 }
 
+.section_cta {
+	background-size: cover;
+	background: url(images/section-cta_bg.svg) center center;
+	margin-bottom: 55px
+}
+
+@media screen and (min-width: 1200px) {
+	.section_cta {
+		margin-bottom: 110px
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.section_cta {
+		margin-bottom: 110px;
+		background: url(images/section-cta_bg.svg) top center/cover
+	}
+}
+
+.section_cta__copy {
+	padding: 50px 25px
+}
+
+@media screen and (min-width: 1200px) {
+	.section_cta__copy {
+		padding: 50px
+	}
+}
+
+.section_cta .logo__image {
+	margin-bottom: 25px
+}
+
+@media screen and (min-width: 1200px) {
+	.section_cta .logo__image {
+		margin-bottom: 50px
+	}
+}
+
+.section_cta h2 {
+	color: $orange;
+	margin-bottom: 25px;
+	font-weight: 300;
+	font-size: 22px
+}
+
+@media screen and (min-width: 992px) {
+	.section_cta h2 {
+		font-size: 30px
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.section_cta h2 {
+		font-size: 40px
+	}
+}
+
+.section_cta p {
+	font-size: 16px
+}
+
+.section_cta p.cta_copy {
+	margin-bottom: 15px
+}
+
+@media screen and (min-width: 1200px) {
+	.section_cta p.cta_copy {
+		margin-bottom: 25px
+	}
+}
+
+.section_cta a {
+	color: #ec6156;
+	font-weight: 500
+}
+
+.section_cta a:hover {
+	color: #000
+}
+
 
 .services {
 
@@ -142,6 +223,17 @@
 .hortizontal-gallery {
 
   margin-bottom: 150px;
+  max-height: 100%;
+
+  .horizontal_gallery {
+    overflow: visible !important;
+  }
+
+  .swiper-pagination {
+
+    bottom: -125px !important;
+
+  }
 
   &__img {
     margin-bottom: 15px;
@@ -170,6 +262,34 @@
     }
 
 
+  }
+
+  & .slider__nav-btn--next {
+	background: #ec6156;
+	right: -38px !important;
+	width: 75px
+}
+
+  & .slider__nav-btn--next svg {
+  	float: left;
+  	margin-top: 5px;
+  	margin-left: 15px
+  }
+
+  & .slider__nav-btn--prev {
+  	background: #ec6156;
+  	width: 75px;
+  	left: 38px !important
+  }
+
+  & .slider__nav-btn--prev svg {
+  	margin-top: 5px;
+  	margin-right: 15px;
+  	float: right
+  }
+
+  & .swiper-pagination-bullets {
+  	width: 100%
   }
 
   .swiper-pagination-bullets {

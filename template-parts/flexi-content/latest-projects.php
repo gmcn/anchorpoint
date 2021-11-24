@@ -55,7 +55,7 @@
                 <div class="slider__item slide swiper-slide" data-swiper-slide-index="<?php echo $i; ?>" style="margin-right: 10px;" role="group" aria-label="<?php echo $i; ?> / 12">
                   <img src="<?php echo get_the_post_thumbnail_url($featured_post->ID,'project-slide') ?>" alt="<?php echo $title  ?>">
                     <div class="slide__content slide-content">
-                      <div class="slide-content__detail"><?php echo $date_string; ?> - <?php echo $location; ?></div>
+                      <!-- <div class="slide-content__detail"><?php echo $date_string; ?> - <?php echo $location; ?></div> -->
                       <div class="slide-content__heading">
                         <a href="<?php echo $permalink; ?>"><?php echo $title ?></a>
                       </div>
