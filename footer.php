@@ -168,6 +168,10 @@
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript">
+var whoistrack_params=whoistrack_params||[];whoistrack_params.push(["wait","9d28d3529ea84b62802891dc651c032f"]);var t=document["createElement"]("script"),i;t["type"]="text/javascript";t["src"]=window["location"]["href"]["split"]("/")[0]+"//app.whoisvisiting.com/who.js";i=document["getElementsByTagName"]("script")[0];i["parentNode"]["insertBefore"](t,i);
+</script>
+
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
