@@ -26,13 +26,17 @@
 
 
           <div class="our-story__intro-wrapper">
-            <div class="our-story__exp">
-              <span class="our-story__exp-value">22</span>
-              <span class="our-story__exp-text">years
-                <br>of experience
-              </span>
-            </div>
-            <div class="our-story__intro-text">In workplace consultancy, design & feasibility, and workspace build.</div>
+
+            <?php if (is_front_page()): ?>
+              <div class="our-story__exp">
+                <span class="our-story__exp-value">22</span>
+                <span class="our-story__exp-text">years
+                  <br>of experience
+                </span>
+              </div>
+            <?php endif; ?>
+
+            <div class="our-story__intro-text"><?php echo $section_text_image_overlay_text ?></div>
           </div>
         </div>
       </div>
