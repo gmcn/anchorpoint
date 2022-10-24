@@ -22,6 +22,10 @@
 
        <?php include(locate_template("template-parts/flexi-content/contact-form.php")); ?>
 
+     <?php elseif( get_row_layout() == 'section_building-block_layout' ): ?>
+
+       <?php include(locate_template("template-parts/flexi-content/content-services.php")); ?>
+
      <?php elseif( get_row_layout() == 'section_team' ): ?>
 
        <?php include(locate_template("template-parts/flexi-content/team.php")); ?>
