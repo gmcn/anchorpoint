@@ -147,12 +147,16 @@
 
 					<img class="bm-trada" src="<?php echo get_template_directory_uri() ?>/images/bm-trada.jpg" alt="bm trada certified">
 
+					<img class="bm-trada" src="<?php echo get_template_directory_uri() ?>/images/Safe-Contractor-logo.png" alt="Safe Contractor">
+
+
+
 
 				</div>
 			</div>
 			<div class="row">
 				<div class="footer__copyright col-12 col-sm-6">
-					© 2021 <span>ANCHORPOINT</span>. All Rights Reserved Design by <span><a href="https://creativemediani.com/" target="_blank">Creative Media</a></span>
+					© <?php echo date('Y'); ?> <span>ANCHORPOINT</span>. All Rights Reserved Design by <span><a href="https://creativemediani.com/" target="_blank">Creative Media</a></span>
 				</div>
 				<div class="footer__design col-12 col-sm-6">
 
